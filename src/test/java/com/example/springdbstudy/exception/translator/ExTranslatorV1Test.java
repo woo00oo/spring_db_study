@@ -29,7 +29,7 @@ public class ExTranslatorV1Test {
     void init() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource(URL, USERNAME, PASSWORD);
         repository = new Repository(dataSource);
-        service = new Service(service);
+        service = new Service(repository);
     }
 
     @Test
