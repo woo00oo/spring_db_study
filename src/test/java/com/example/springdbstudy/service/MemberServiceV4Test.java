@@ -1,10 +1,7 @@
 package com.example.springdbstudy.service;
 
 import com.example.springdbstudy.domain.Member;
-import com.example.springdbstudy.repository.MemberRepository;
-import com.example.springdbstudy.repository.MemberRepositoryV3;
-import com.example.springdbstudy.repository.MemberRepositoryV4_1;
-import com.example.springdbstudy.repository.MemberRepositoryV4_2;
+import com.example.springdbstudy.repository.*;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.DisplayName;
@@ -51,7 +48,8 @@ class MemberServiceV4Test {
         @Bean
         MemberRepository memberRepository() {
             //return new MemberRepositoryV4_1(dataSource);
-            return new MemberRepositoryV4_2(dataSource);
+            //return new MemberRepositoryV4_2(dataSource);
+            return new MemberRepositoryV5(dataSource);
         }
 
         @Bean
